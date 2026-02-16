@@ -25,7 +25,7 @@ A query da Home foi modificada (`'order' => 'ASC'`) para que o primeiro post pub
 ### 4. Logo Cliente
 A logo possui bordas dinâmicas via `display: inline-block`, garantindo que o contorno branco acompanhe apenas o tamanho do texto, sem sobras indesejadas no desktop ou mobile.
 
-## 🚀 Como instalar novos recursos
+## Como instalar novos recursos
 Caso precise adicionar novos ícones ou imagens, utilize a pasta:
 `assets/imagens/`
 
