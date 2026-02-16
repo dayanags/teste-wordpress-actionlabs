@@ -1,0 +1,140 @@
+/*
+Theme Name: Action Labs
+*/
+
+/* --- 1. GLOBAIS E TIPOGRAFIA --- */
+:root { 
+    --cyan: #00D1FF; 
+    --dark-blue: #006B8D; 
+    --leia-mais: #01758D; 
+    --text-gray: #888;
+    --meta-gray: #999;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Roboto', sans-serif; 
+    background-color: #F5F5F5; 
+    color: #555; 
+    overflow-x: hidden; 
+}
+
+a { text-decoration: none !important; color: inherit; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* --- 2. TÍTULOS E LABELS --- */
+h1, h2, h3, 
+.logo-box, 
+.site-navigation li a, 
+.home-category, 
+.home-read-more, 
+.post-badge-blue, 
+.post-main-title, 
+.home-hero h1,
+.sobre-h1,
+.sobre-h2 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 800; 
+}
+
+/* --- 3. HEADER --- */
+.site-header { background: var(--cyan); padding: 15px 0; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+.logo-box { 
+    border: 2px solid #FFF; 
+    padding: 4px 10px; 
+    color: #FFF !important; 
+    text-transform: uppercase; 
+    font-size: 0.8rem;
+    display: inline-block;
+    line-height: 1;
+}
+
+.site-navigation ul { display: flex; gap: 15px; list-style: none; }
+.site-navigation li a { background: #FFF; color: var(--cyan) !important; padding: 10px 25px; border-radius: 30px; font-size: 0.75rem; text-transform: uppercase; display: block; }
+.site-navigation li a[href*="sobre-nos"] { color: var(--dark-blue) !important; }
+
+/* --- 4. HOME (front-page.php) --- */
+.home-hero { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/images/hero.jpg') center/cover; padding: 150px 0; color: #FFF; }
+.home-hero h1 { font-size: 4rem; }
+
+.home-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: -80px; padding-bottom: 80px; }
+
+.home-card { 
+    background: #FFF; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    position: relative; 
+}
+
+.home-img-wrapper img { width: 100%; height: 220px; object-fit: cover; display: block; }
+
+/* LABEL BRANCO COM FONTE CINZA SOBREPOSTO */
+.home-category { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    background: #FFF; 
+    color: var(--meta-gray); 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 10px; 
+    z-index: 2; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.home-content { padding: 25px; }
+.home-content h2 { color: var(--dark-blue); font-size: 1.3rem; margin-bottom: 15px; line-height: 1.2; }
+.home-excerpt { font-family: 'Roboto', sans-serif; color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+.home-read-more { color: var(--leia-mais) !important; font-size: 0.75rem; text-transform: uppercase; }
+
+/* --- 5. POST (single.php) --- */
+.post-banner-bg { height: 400px; background-size: cover; background-position: center; }
+.post-card-overlap { background: #FFF; max-width: 900px; margin: -200px auto 60px; padding: 50px 70px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; }
+.post-internal-img img { width: 100%; height: auto !important; margin-bottom: 35px; border-radius: 4px; }
+
+.post-badge-blue { background: var(--dark-blue); color: #FFF; padding: 8px 25px; border-radius: 30px; font-size: 10px; display: inline-block; margin-bottom: 25px; }
+
+.post-meta-line { display: flex; gap: 30px; margin-bottom: 30px; align-items: center; color: var(--meta-gray); font-size: 0.85rem; }
+.meta-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-family: 'Roboto', sans-serif; }
+.meta-item img { width: 16px; height: 16px; }
+
+.post-main-title { font-size: 2.8rem; color: #333; text-transform: uppercase; margin-bottom: 15px; line-height: 1.1; }
+.post-author-name { font-family: 'Roboto', sans-serif; color: #BBB; font-size: 0.9rem; margin-bottom: 60px; display: block; }
+.post-main-content p { font-family: 'Roboto', sans-serif; margin-bottom: 35px; line-height: 1.8; text-align: justify; font-size: 1.1rem; }
+
+/* --- 6. SOBRE NÓS --- */
+.sobre-main-wrapper { max-width: 900px; margin: 100px auto; }
+.sobre-h1 { color: var(--dark-blue); font-size: 64px; margin-bottom: 15px; }
+.sobre-h2 { font-size: 40px; color: #444; margin-bottom: 50px; line-height: 1.1; }
+.sobre-text p { font-family: 'Roboto', sans-serif; margin-bottom: 35px; line-height: 1.8; text-align: justify; font-size: 1.1rem; }
+
+/* --- 7. FOOTER --- */
+.site-footer { background: var(--cyan); padding: 40px 0 20px; color: #FFF; margin-top: 80px; }
+.footer-bottom-line { border-top: 1px solid rgba(255,255,255,0.4); margin-top: 30px; padding-top: 20px; text-align: right; }
+.footer-copyright { font-family: 'Roboto', sans-serif; font-size: 0.75rem; opacity: 0.8; }
+
+/* --- 8. RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 992px) {
+    .home-grid { grid-template-columns: repeat(2, 1fr); margin-top: -40px; }
+    .home-hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .header-flex { flex-direction: column; text-align: center; gap: 15px; }
+    .home-grid { grid-template-columns: 1fr; margin-top: -20px; }
+    .home-hero { padding: 60px 0; }
+    .home-hero h1 { font-size: 2.2rem; text-align: center; }
+
+    /* Correção do Sobre Nós para não subir no header no mobile */
+    .sobre-main-wrapper { margin: 40px auto; padding: 0 20px; } 
+    
+    .post-card-overlap { padding: 30px 20px; margin: -50px auto 40px; width: 95%; }
+    .post-meta-line { flex-direction: column; align-items: flex-start; gap: 15px; }
+
+    .post-main-title, .sobre-h1 { font-size: 1.8rem; }
+    .sobre-h2 { font-size: 1.4rem; }
+}
